@@ -1,0 +1,9 @@
+User-agent: Yandex 
+Disallow: /js/
+Host: master-nsk.ru
+Sitemap: http://home.master-nsk.ru/sitemap.xml
+
+User-agent: *
+Disallow: /js/
+
+Sitemap: http://home.master-nsk.ru/sitemap.xml
