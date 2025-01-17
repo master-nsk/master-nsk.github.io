@@ -29,16 +29,16 @@ function checkCursor(){
 	sec++;
    }
  window.onbeforeunload = function(e) {
-	//new Image().src = "/mycounter/counter-yadro/sec/?"+"sec="+sec;
+	//new Image().src = "http://a1057599.xsph.ru/mycounter/counter-yadro/sec/?"+"sec="+sec;
 	if (typeof cursorX ==="undefined") cursorX=9999;
 	if (typeof cursorY ==="undefined") cursorY=9999;
 	//$.get("/mycounter/counter-yadro/sec/", {sec : sec, coordx: cursorX, coordy: cursorY });
-	new Image().src = "/mycounter/counter-yadro/sec/?"+"sec="+sec+'&coordx='+cursorX+'&coordy='+cursorY;	
+	new Image().src = "http://a1057599.xsph.ru/mycounter/counter-yadro/sec/?"+"sec="+sec+'&coordx='+cursorX+'&coordy='+cursorY;	
 } 
 </script>
 	
 <!--Myscript counter-->
-<script>new Image().src = "/mycounter/counter-yadro/?"+((typeof(screen)=="undefined")?"":
+<script>new Image().src = "http://a1057599.xsph.ru/mycounter/counter-yadro/?"+((typeof(screen)=="undefined")?"":
 "s="+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
 screen.colorDepth:screen.pixelDepth))+'&coordx='+cursorX+'&coordy='+cursorY;
 </script>
