@@ -12,7 +12,38 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&amp;subset=cyrillic" rel="stylesheet"> 
 <!-- <script src="/js/free_validation.js"></script> -->
 <script src="/js/tel.js"></script>
-
+	
+<script>
+ //Определяем координаты мыши ; Вешаем обработчик на событие mousemove.
+ var cursorX=0;
+ var cursorY=0;
+ var flalert=1;
+ var is_data_changed=true;
+ var sec=0;
+document.onmousemove = function(e){
+    cursorX = e.pageX;
+    cursorY = e.pageY;
+}
+setInterval(checkCursor, 1000);
+function checkCursor(){
+	sec++;
+   }
+ window.onbeforeunload = function(e) {
+	//new Image().src = "/mycounter/counter-yadro/sec/?"+"sec="+sec;
+	if (typeof cursorX ==="undefined") cursorX=9999;
+	if (typeof cursorY ==="undefined") cursorY=9999;
+	//$.get("/mycounter/counter-yadro/sec/", {sec : sec, coordx: cursorX, coordy: cursorY });
+	new Image().src = "/mycounter/counter-yadro/sec/?"+"sec="+sec+'&coordx='+cursorX+'&coordy='+cursorY;	
+} 
+</script>
+	
+<!--Myscript counter-->
+<script>new Image().src = "/mycounter/counter-yadro/?"+((typeof(screen)=="undefined")?"":
+"s="+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+'&coordx='+cursorX+'&coordy='+cursorY;
+</script>
+<!--End Myscript counter-->
+	
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
